@@ -1,7 +1,10 @@
-async function getData(poke) {
+const container = container.innerHTML();
+async function getData(digimon) {
   try {
     // get  data from API
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke}`);
+    const response = await fetch(
+      `https://digimon-api.vercel.app/api/digimon/name/${digimon}`
+    );
     if (response.status != 200) {
       throw new Error(response);
     } else {
@@ -15,4 +18,4 @@ async function getData(poke) {
   }
 }
 
-getData("Squirtle");
+getData("koromon");
