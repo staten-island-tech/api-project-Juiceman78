@@ -1,10 +1,7 @@
-const container = container.innerHTML();
-async function getData(digimon) {
+async function getData() {
   try {
-    // get  data from API
-    const response = await fetch(
-      `https://digimon-api.vercel.app/api/digimon/name/${digimon}`
-    );
+    // get data from API
+    const response = await fetch(`https://digimon-api.vercel.app/api/digimon`);
     if (response.status != 200) {
       throw new Error(response);
     } else {
@@ -18,4 +15,4 @@ async function getData(digimon) {
   }
 }
 
-getData("koromon");
+getData();
