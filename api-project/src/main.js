@@ -20,11 +20,21 @@ function inject(digimon) {
   container.insertAdjacentHTML(
     "afterbegin",
     `
-    <div class="card">
-      <div class="text">${digimon.name}</div>
-      <div class="text">${digimon.level}</div>
-      <img class="img" src="${digimon.img}">
+    <div class="card bg-base-100 w-96 shadow-sm">
+  <figure class="px-10 pt-10">
+    <img
+      src="${digimon.img}"
+      alt="Digimon"
+      class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="Name">${digimon.name}</h2>
+    <h3 class="Level">${digimon.level}</h3>
+    <div class="card-actions">
+      <button class="btn btn-primary">Buy Now</button>
     </div>
+  </div>
+</div>
     `
   );
 }
