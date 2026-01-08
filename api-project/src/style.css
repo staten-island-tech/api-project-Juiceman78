@@ -7,6 +7,83 @@
   padding: 0px;
   box-sizing: border-box;
 }
+/* Page background */
+body {
+  background-color: #f3f4f6; /* light gray */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
+/* App container layout */
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Card styling */
+.card {
+  background-color: #ffffff;
+  width: 18rem;
+  border-radius: 1rem;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container */
+.card figure {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+/* Image */
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Card body */
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Digimon name */
 .Name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+/* Digimon level */
+.Level {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.card button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card button:hover {
+  background-color: #1d4ed8;
 }

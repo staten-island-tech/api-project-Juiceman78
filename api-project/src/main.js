@@ -1,5 +1,7 @@
 // Get the container where Digimon cards will go
 const container = document.getElementById("app");
+//connect css
+import "./style.css";
 // Fetch Digimon data from API
 async function getData() {
   try {
@@ -42,4 +44,28 @@ function inject(digimon) {
 const data = await getData();
 if (data) {
   data.forEach((digimon) => inject(digimon));
+}
+
+function showmore() {
+  container.innerHTML = "";
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `
+    <div class="card bg-base-100 w-96 shadow-sm">
+  <figure class="px-10 pt-10">
+    <img
+      src="${digimon.img}"
+      alt="Digimon"
+      class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="Name">${digimon.name}</h2>
+    <h3 class="Level">${digimon.level}</h3>
+    <div class="card-actions">
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+    `
+  );
 }
